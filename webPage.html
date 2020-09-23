@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Ecuador Ama la vida</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+  body,
+  h1,
+  h2 {
+    font-family: "Raleway", sans-serif
+  }
+
+  body,
+  html {
+    height: 100%
+  }
+
+  p {
+    line-height: 2
+  }
+
+  .bgimg,
+  .bgimg2 {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bgimg {
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/23/14/44/quilotoa-5209923_1280.jpg")
+  }
+
+  .bgimg2 {
+    background-image: url("https://cdn.pixabay.com/photo/2019/12/11/13/50/volcano-4688409_1280.jpg")
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Button used to open the chat form - fixed at the bottom of the page */
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 70px;
+    right: 28px;
+    width: 260px;
+    z-index: 1;
+  }
+
+  /* The popup chat - hidden by default */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  /* Full-width textarea */
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover,
+  .open-button:hover {
+    opacity: 1;
+  }
+  
+  table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+      }
+</style>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Mapa Demo</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/css/result-light.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css">
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.5/leaflet-routing-machine.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.5/leaflet-routing-machine.css">
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.css">
+
+<style id="compiled-css" type="text/css"></style>
+
+<body>
+  <!-- Header / Home-->
+  <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-text-white w3-center">
+      <h1 class="w3-jumbo">Ecuador</h1>
+      <h2><b>AMA LA VIDA</b></h2>
+    </div>
+  </header>
+
+  <button class="open-button" onclick="openForm()">Abrir Chat</button>
+
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <iframe
+        src='https://webchat.botframework.com/embed/ChatBotCloud?s=eRJA4LKHLKs.s8N1Spy144YnWWobWZ8xp-HmNqwCBitDqWlNz7k5WUU'
+        style='min-width: 200px; width: 100%; min-height: 300px;'></iframe>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+
+  <!-- Navbar (sticky bottom) -->
+  <div class="w3-bottom w3-hide-small">
+    <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+      <a href="#home" style="width:20%" class="w3-bar-item w3-button">Bienvenido</a>
+      <a href="#info" style="width:20%" class="w3-bar-item w3-button">Información</a>
+      <a href="#cambio" style="width:20%" class="w3-bar-item w3-button">Cambio de Moneda</a>
+      <a href="#ruta" style="width:20%" class="w3-bar-item w3-button">Como llegar</a>
+      <a href="#registro" style="width:20%" class="w3-bar-item w3-button">Registro</a>
+
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="info">
+    <div class="w3-content">
+      <h1 class="w3-center"><b>Ecuador</b></h1>
+      <img class="w3-round "
+        src="https://es.aleteia.org/wp-content/uploads/sites/7/2018/02/web3-yasuni-ecuador-national-park-alan-flora-botting-cc-by-sa-2-0.jpg"
+        style="width:100%; margin:32px 0">
+      <img class="w3-round "
+        src="https://images.unsplash.com/photo-1576333912285-fc883c6896fa?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+        style="width:100%; margin:32px 0">
+
+      <p><i>
+          Ecuador es un paraíso ubicado en el centro del mundo, multiétnico y multicultural. El mejor destino para
+          realizar turismo en Sudamérica, conoce más del país de los cuatro mundos.
+        </i>
+      </p><br>
+      <p class="w3-center"><a href="#cambio"
+          class="w3-button w3-black w3-round w3-padding-large w3-large">Información</a></p>
+    </div>
+  </div>
+
+  <!-- Backgroundp hoto -->
+  <div class="w3-display-container bgimg2">
+    <div class="w3-display-middle w3-text-white w3-center">
+      <h1 class="w3-jumbo"></h1><br>
+    </div>
+  </div>
+
+  <!-- Wedding information -->
+  <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="cambio">
+    <div class="w3-content">
+      <h1>Cambio de Moneda</h1>
+	  
+	  	<script>
+	function SOAPClientParameters()
+{
+	var _pl = new Array();
+	this.add = function(name, value) 
+	{
+		_pl[name] = value; 
+		return this; 
+	}
+	this.toXml = function()
+	{
+		var xml = "";
+		for(var p in _pl)
+		{
+			if(typeof(_pl[p]) != "function")
+				xml += "<" + p + ">" + _pl[p].toString().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + "</" + p + ">";
+		}
+		return xml;	
+	}
+}
+
+function SOAPClient() {}
+
+SOAPClient.invoke = function(url, method, parameters, async, callback)
+{
+	if(async)
+		SOAPClient._loadWsdl(url, method, parameters, async, callback);
+	else
+		return SOAPClient._loadWsdl(url, method, parameters, async, callback);
+}
+
+// private: wsdl cache
+SOAPClient_cacheWsdl = new Array();
+
+// private: invoke async
+SOAPClient._loadWsdl = function(url, method, parameters, async, callback)
+{
+	// load from cache?
+	var wsdl = SOAPClient_cacheWsdl[url];
+	if(wsdl + "" != "" && wsdl + "" != "undefined")
+		return SOAPClient._sendSoapRequest(url, method, parameters, async, callback, wsdl);
+	// get wsdl
+	var xmlHttp = SOAPClient._getXmlHttp();
+	xmlHttp.open("GET", url + "?wsdl", async);
+	if(async) 
+	{
+		xmlHttp.onreadystatechange = function() 
+		{
+			if(xmlHttp.readyState == 4)
+				SOAPClient._onLoadWsdl(url, method, parameters, async, callback, xmlHttp);
+		}
+	}
+	xmlHttp.send(null);
+	if (!async)
+		return SOAPClient._onLoadWsdl(url, method, parameters, async, callback, xmlHttp);
+}
+SOAPClient._onLoadWsdl = function(url, method, parameters, async, callback, req)
+{
+	var wsdl = req.responseXML;
+	SOAPClient_cacheWsdl[url] = wsdl;	// save a copy in cache
+	return SOAPClient._sendSoapRequest(url, method, parameters, async, callback, wsdl);
+}
+SOAPClient._sendSoapRequest = function(url, method, parameters, async, callback, wsdl)
+{
+	// get namespace
+	var ns = (wsdl.documentElement.attributes["targetNamespace"] + "" == "undefined") ? wsdl.documentElement.attributes.getNamedItem("targetNamespace").nodeValue : wsdl.documentElement.attributes["targetNamespace"].value;
+	// build SOAP request
+	var sr = 
+				"<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+				"<soap:Envelope " +
+				"xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
+				"xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" " +
+				"xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">" +
+				"<soap:Body>" +
+				"<" + method + " xmlns=\"" + ns + "\">" +
+				parameters.toXml() +
+				"</" + method + "></soap:Body></soap:Envelope>";
+	// send request
+	var xmlHttp = SOAPClient._getXmlHttp();
+	xmlHttp.open("POST", url, async);
+	var soapaction = ((ns.lastIndexOf("/") != ns.length - 1) ? ns + "/" : ns) + method;
+	xmlHttp.setRequestHeader("SOAPAction", soapaction);
+	xmlHttp.setRequestHeader("Content-Type", "text/xml; charset=utf-8");
+	xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+	if(async) 
+	{
+		xmlHttp.onreadystatechange = function() 
+		{
+			if(xmlHttp.readyState == 4)
+				SOAPClient._onSendSoapRequest(method, async, callback, wsdl, xmlHttp);
+		}
+	}
+	xmlHttp.send(sr);
+	if (!async)
+		return SOAPClient._onSendSoapRequest(method, async, callback, wsdl, xmlHttp);
+}
+SOAPClient._onSendSoapRequest = function(method, async, callback, wsdl, req)
+{
+	var o = null;
+	var nd = SOAPClient._getElementsByTagName(req.responseXML, method + "Result");
+	if(nd.length == 0)
+	{
+		if(req.responseXML.getElementsByTagName("faultcode").length > 0)
+			throw new Error(500, req.responseXML.getElementsByTagName("faultstring")[0].childNodes[0].nodeValue);
+	}
+	else
+		o = SOAPClient._soapresult2object(nd[0], wsdl);
+	if(callback)
+		callback(o, req.responseXML);
+	if(!async)
+		return o;		
+}
+
+// private: utils
+SOAPClient._getElementsByTagName = function(document, tagName)
+{
+	try
+	{
+		// trying to get node omitting any namespaces (latest versions of MSXML.XMLDocument)
+		return document.selectNodes(".//*[local-name()=\""+ tagName +"\"]");
+	}
+	catch (ex) {}
+	// old XML parser support
+	return document.getElementsByTagName(tagName);
+}
+
+SOAPClient._soapresult2object = function(node, wsdl)
+{
+	return SOAPClient._node2object(node, wsdl);
+}
+SOAPClient._node2object = function(node, wsdl)
+{
+	// null node
+	if(node == null)
+		return null;
+	// text node
+	if(node.nodeType == 3 || node.nodeType == 4)
+		return SOAPClient._extractValue(node, wsdl);
+	// leaf node
+	if (node.childNodes.length == 1 && (node.childNodes[0].nodeType == 3 || node.childNodes[0].nodeType == 4))
+		return SOAPClient._node2object(node.childNodes[0], wsdl);
+	var isarray = SOAPClient._getTypeFromWsdl(node.nodeName, wsdl).toLowerCase().indexOf("arrayof") != -1;
+	// object node
+	if(!isarray)
+	{
+		var obj = null;
+		if(node.hasChildNodes())
+			obj = new Object();
+		for(var i = 0; i < node.childNodes.length; i++)
+		{
+			var p = SOAPClient._node2object(node.childNodes[i], wsdl);
+			obj[node.childNodes[i].nodeName] = p;
+		}
+		return obj;
+	}
+	// list node
+	else
+	{
+		// create node ref
+		var l = new Array();
+		for(var i = 0; i < node.childNodes.length; i++)
+			l[l.length] = SOAPClient._node2object(node.childNodes[i], wsdl);
+		return l;
+	}
+	return null;
+}
+SOAPClient._extractValue = function(node, wsdl)
+{
+	var value = node.nodeValue;
+	switch(SOAPClient._getTypeFromWsdl(node.parentNode.nodeName, wsdl).toLowerCase())
+	{
+		default:
+		case "s:string":			
+			return (value != null) ? value + "" : "";
+		case "s:boolean":
+			return value+"" == "true";
+		case "s:int":
+		case "s:long":
+			return (value != null) ? parseInt(value + "", 10) : 0;
+		case "s:double":
+			return (value != null) ? parseFloat(value + "") : 0;
+		case "s:datetime":
+			if(value == null)
+				return null;
+			else
+			{
+				value = value + "";
+				value = value.substring(0, value.lastIndexOf("."));
+				value = value.replace(/T/gi," ");
+				value = value.replace(/-/gi,"/");
+				var d = new Date();
+				d.setTime(Date.parse(value));										
+				return d;				
+			}
+	}
+}
+SOAPClient._getTypeFromWsdl = function(elementname, wsdl)
+{
+	var ell = wsdl.getElementsByTagName("s:element");	// IE
+	if(ell.length == 0)
+		ell = wsdl.getElementsByTagName("element");	// MOZ
+	for(var i = 0; i < ell.length; i++)
+	{
+		if(ell[i].attributes["name"] + "" == "undefined")	// IE
+		{
+			if(ell[i].attributes.getNamedItem("name") != null && ell[i].attributes.getNamedItem("name").nodeValue == elementname && ell[i].attributes.getNamedItem("type") != null) 
+				return ell[i].attributes.getNamedItem("type").nodeValue;
+		}	
+		else // MOZ
+		{
+			if(ell[i].attributes["name"] != null && ell[i].attributes["name"].value == elementname && ell[i].attributes["type"] != null)
+				return ell[i].attributes["type"].value;
+		}
+	}
+	return "";
+}
+// private: xmlhttp factory
+SOAPClient._getXmlHttp = function() 
+{
+	try
+	{
+		if(window.XMLHttpRequest) 
+		{
+			var req = new XMLHttpRequest();
+			// some versions of Moz do not support the readyState property and the onreadystate event so we patch it!
+			if(req.readyState == null) 
+			{
+				req.readyState = 1;
+				req.addEventListener("load", 
+									function() 
+									{
+										req.readyState = 4;
+										if(typeof req.onreadystatechange == "function")
+											req.onreadystatechange();
+									},
+									false);
+			}
+			return req;
+		}
+		if(window.ActiveXObject) 
+			return new ActiveXObject(SOAPClient._getXmlHttpProgID());
+	}
+	catch (ex) {}
+	throw new Error("Your browser does not support XmlHttp objects");
+}
+SOAPClient._getXmlHttpProgID = function()
+{
+	if(SOAPClient._getXmlHttpProgID.progid)
+		return SOAPClient._getXmlHttpProgID.progid;
+	var progids = ["Msxml2.XMLHTTP.5.0", "Msxml2.XMLHTTP.4.0", "MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];
+	var o;
+	for(var i = 0; i < progids.length; i++)
+	{
+		try
+		{
+			o = new ActiveXObject(progids[i]);
+			return SOAPClient._getXmlHttpProgID.progid = progids[i];
+		}
+		catch (ex) {};
+	}
+	throw new Error("Could not find an installed XML parser");
+}
+</script>
+	  
+<script>
+	
+	var url = "https://srvmoneda.azurewebsites.net/Convertidor.asmx"
+	
+	// DEMO 2
+	function Libras()
+	{
+		var pl = new SOAPClientParameters();
+		pl.add("libras", parseFloat(document.frmDemo.entradaLibras.value));
+		SOAPClient.invoke(url, "LibrasADolares", pl, true, librasADolares_callBack);
+	}
+	
+	function librasADolares_callBack(r)
+	{
+		document.getElementById("lblLibrasDolares").value = r;
+	}
+
+
+	// utils
+	function toggle(id) 
+	{
+		var d = document.getElementById(id);
+		if(d != null)
+			d.className = (d.className == "h") ? "s" : "h"; 
+	}
+</script>
+
+<script>
+var url = "https://srvmoneda.azurewebsites.net/Convertidor.asmx"
+	function PesosM()
+	{
+		var p2 = new SOAPClientParameters();
+		p2.add("pesos", parseFloat(document.frmDemo2.entradaPesosM.value));
+		SOAPClient.invoke(url, "PesosMADolares", p2, true, pesosMADolaresC);
+	}
+	function pesosMADolaresC(r)
+	{
+		document.getElementById("lblPesosMDolares").value = r;
+	}
+	
+	function PesosC()
+	{
+		var p3 = new SOAPClientParameters();
+		p3.add("pesos", parseFloat(document.frmDemo3.entradaPesosC.value));
+		SOAPClient.invoke(url, "PesosCADolares", p3, true, pesosColomDolares);
+	}
+	function pesosColomDolares(r)
+	{
+		document.getElementById("lblPesosCDolares").value = r;
+	}
+	
+	function Soles()
+	{
+		var p4 = new SOAPClientParameters();
+		p4.add("soles", parseFloat(document.frmDemo4.entradaSoles.value));
+		SOAPClient.invoke(url, "SolesADolares", p4, true, SolesDolares);
+	}
+	function SolesDolares(r)
+	{
+		document.getElementById("lblSolesDolares").value = r;
+	}
+	
+	function Yuanes()
+	{
+		var p5 = new SOAPClientParameters();
+		p5.add("yuan", parseFloat(document.frmDemo5.entradaYuanes.value));
+		SOAPClient.invoke(url, "YuanADolares", p5, true, YuanesDolares);
+	}
+	function YuanesDolares(r)
+	{
+		document.getElementById("lblYuanesDolares").value = r;
+	}
+	// utils
+	function toggle(id) 
+	{
+		var d = document.getElementById(id);
+		if(d != null)
+			d.className = (d.className == "h") ? "s" : "h"; 
+	}
+</script>
+
+<script>
+
+function SOAPClientParameters()
+{
+	var _pl = new Array();
+	this.add = function(name, value) 
+	{
+		_pl[name] = value; 
+		return this; 
+	}
+	this.toXml = function()
+	{
+		var xml = "";
+		for(var p in _pl)
+		{
+			if(typeof(_pl[p]) != "function")
+				xml += "<" + p + ">" + _pl[p].toString().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + "</" + p + ">";
+		}
+		return xml;	
+	}
+}
+
+function SOAPClient() {}
+
+SOAPClient.invoke = function(url, method, parameters, async, callback)
+{
+	if(async)
+		SOAPClient._loadWsdl(url, method, parameters, async, callback);
+	else
+		return SOAPClient._loadWsdl(url, method, parameters, async, callback);
+}
+
+// private: wsdl cache
+SOAPClient_cacheWsdl = new Array();
+
+// private: invoke async
+SOAPClient._loadWsdl = function(url, method, parameters, async, callback)
+{
+	// load from cache?
+	var wsdl = SOAPClient_cacheWsdl[url];
+	if(wsdl + "" != "" && wsdl + "" != "undefined")
+		return SOAPClient._sendSoapRequest(url, method, parameters, async, callback, wsdl);
+	// get wsdl
+	var xmlHttp = SOAPClient._getXmlHttp();
+	xmlHttp.open("GET", url + "?wsdl", async);
+	if(async) 
+	{
+		xmlHttp.onreadystatechange = function() 
+		{
+			if(xmlHttp.readyState == 4)
+				SOAPClient._onLoadWsdl(url, method, parameters, async, callback, xmlHttp);
+		}
+	}
+	xmlHttp.send(null);
+	if (!async)
+		return SOAPClient._onLoadWsdl(url, method, parameters, async, callback, xmlHttp);
+}
+SOAPClient._onLoadWsdl = function(url, method, parameters, async, callback, req)
+{
+	var wsdl = req.responseXML;
+	SOAPClient_cacheWsdl[url] = wsdl;	// save a copy in cache
+	return SOAPClient._sendSoapRequest(url, method, parameters, async, callback, wsdl);
+}
+SOAPClient._sendSoapRequest = function(url, method, parameters, async, callback, wsdl)
+{
+	// get namespace
+	var ns = (wsdl.documentElement.attributes["targetNamespace"] + "" == "undefined") ? wsdl.documentElement.attributes.getNamedItem("targetNamespace").nodeValue : wsdl.documentElement.attributes["targetNamespace"].value;
+	// build SOAP request
+	var sr = 
+				"<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+				"<soap:Envelope " +
+				"xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
+				"xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" " +
+				"xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">" +
+				"<soap:Body>" +
+				"<" + method + " xmlns=\"" + ns + "\">" +
+				parameters.toXml() +
+				"</" + method + "></soap:Body></soap:Envelope>";
+	// send request
+	var xmlHttp = SOAPClient._getXmlHttp();
+	xmlHttp.open("POST", url, async);
+	var soapaction = ((ns.lastIndexOf("/") != ns.length - 1) ? ns + "/" : ns) + method;
+	xmlHttp.setRequestHeader("SOAPAction", soapaction);
+	xmlHttp.setRequestHeader("Content-Type", "text/xml; charset=utf-8");
+	xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+	if(async) 
+	{
+		xmlHttp.onreadystatechange = function() 
+		{
+			if(xmlHttp.readyState == 4)
+				SOAPClient._onSendSoapRequest(method, async, callback, wsdl, xmlHttp);
+		}
+	}
+	xmlHttp.send(sr);
+	if (!async)
+		return SOAPClient._onSendSoapRequest(method, async, callback, wsdl, xmlHttp);
+}
+SOAPClient._onSendSoapRequest = function(method, async, callback, wsdl, req)
+{
+	var o = null;
+	var nd = SOAPClient._getElementsByTagName(req.responseXML, method + "Result");
+	if(nd.length == 0)
+	{
+		if(req.responseXML.getElementsByTagName("faultcode").length > 0)
+			throw new Error(500, req.responseXML.getElementsByTagName("faultstring")[0].childNodes[0].nodeValue);
+	}
+	else
+		o = SOAPClient._soapresult2object(nd[0], wsdl);
+	if(callback)
+		callback(o, req.responseXML);
+	if(!async)
+		return o;		
+}
+
+// private: utils
+SOAPClient._getElementsByTagName = function(document, tagName)
+{
+	try
+	{
+		// trying to get node omitting any namespaces (latest versions of MSXML.XMLDocument)
+		return document.selectNodes(".//*[local-name()=\""+ tagName +"\"]");
+	}
+	catch (ex) {}
+	// old XML parser support
+	return document.getElementsByTagName(tagName);
+}
+
+SOAPClient._soapresult2object = function(node, wsdl)
+{
+	return SOAPClient._node2object(node, wsdl);
+}
+SOAPClient._node2object = function(node, wsdl)
+{
+	// null node
+	if(node == null)
+		return null;
+	// text node
+	if(node.nodeType == 3 || node.nodeType == 4)
+		return SOAPClient._extractValue(node, wsdl);
+	// leaf node
+	if (node.childNodes.length == 1 && (node.childNodes[0].nodeType == 3 || node.childNodes[0].nodeType == 4))
+		return SOAPClient._node2object(node.childNodes[0], wsdl);
+	var isarray = SOAPClient._getTypeFromWsdl(node.nodeName, wsdl).toLowerCase().indexOf("arrayof") != -1;
+	// object node
+	if(!isarray)
+	{
+		var obj = null;
+		if(node.hasChildNodes())
+			obj = new Object();
+		for(var i = 0; i < node.childNodes.length; i++)
+		{
+			var p = SOAPClient._node2object(node.childNodes[i], wsdl);
+			obj[node.childNodes[i].nodeName] = p;
+		}
+		return obj;
+	}
+	// list node
+	else
+	{
+		// create node ref
+		var l = new Array();
+		for(var i = 0; i < node.childNodes.length; i++)
+			l[l.length] = SOAPClient._node2object(node.childNodes[i], wsdl);
+		return l;
+	}
+	return null;
+}
+SOAPClient._extractValue = function(node, wsdl)
+{
+	var value = node.nodeValue;
+	switch(SOAPClient._getTypeFromWsdl(node.parentNode.nodeName, wsdl).toLowerCase())
+	{
+		default:
+		case "s:string":			
+			return (value != null) ? value + "" : "";
+		case "s:boolean":
+			return value+"" == "true";
+		case "s:int":
+		case "s:long":
+			return (value != null) ? parseInt(value + "", 10) : 0;
+		case "s:double":
+			return (value != null) ? parseFloat(value + "") : 0;
+		case "s:datetime":
+			if(value == null)
+				return null;
+			else
+			{
+				value = value + "";
+				value = value.substring(0, value.lastIndexOf("."));
+				value = value.replace(/T/gi," ");
+				value = value.replace(/-/gi,"/");
+				var d = new Date();
+				d.setTime(Date.parse(value));										
+				return d;				
+			}
+	}
+}
+SOAPClient._getTypeFromWsdl = function(elementname, wsdl)
+{
+	var ell = wsdl.getElementsByTagName("s:element");	// IE
+	if(ell.length == 0)
+		ell = wsdl.getElementsByTagName("element");	// MOZ
+	for(var i = 0; i < ell.length; i++)
+	{
+		if(ell[i].attributes["name"] + "" == "undefined")	// IE
+		{
+			if(ell[i].attributes.getNamedItem("name") != null && ell[i].attributes.getNamedItem("name").nodeValue == elementname && ell[i].attributes.getNamedItem("type") != null) 
+				return ell[i].attributes.getNamedItem("type").nodeValue;
+		}	
+		else // MOZ
+		{
+			if(ell[i].attributes["name"] != null && ell[i].attributes["name"].value == elementname && ell[i].attributes["type"] != null)
+				return ell[i].attributes["type"].value;
+		}
+	}
+	return "";
+}
+// private: xmlhttp factory
+SOAPClient._getXmlHttp = function() 
+{
+	try
+	{
+		if(window.XMLHttpRequest) 
+		{
+			var req = new XMLHttpRequest();
+			// some versions of Moz do not support the readyState property and the onreadystate event so we patch it!
+			if(req.readyState == null) 
+			{
+				req.readyState = 1;
+				req.addEventListener("load", 
+									function() 
+									{
+										req.readyState = 4;
+										if(typeof req.onreadystatechange == "function")
+											req.onreadystatechange();
+									},
+									false);
+			}
+			return req;
+		}
+		if(window.ActiveXObject) 
+			return new ActiveXObject(SOAPClient._getXmlHttpProgID());
+	}
+	catch (ex) {}
+	throw new Error("Your browser does not support XmlHttp objects");
+}
+SOAPClient._getXmlHttpProgID = function()
+{
+	if(SOAPClient._getXmlHttpProgID.progid)
+		return SOAPClient._getXmlHttpProgID.progid;
+	var progids = ["Msxml2.XMLHTTP.5.0", "Msxml2.XMLHTTP.4.0", "MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];
+	var o;
+	for(var i = 0; i < progids.length; i++)
+	{
+		try
+		{
+			o = new ActiveXObject(progids[i]);
+			return SOAPClient._getXmlHttpProgID.progid = progids[i];
+		}
+		catch (ex) {};
+	}
+	throw new Error("Could not find an installed XML parser");
+}
+</script>
+		  
+				<table>
+				
+					  <tr><form id="frmDemo" name="frmDemo" action="" method="post">
+						  <td>
+						  <p>Cantidad en Libras Esterlinas
+						 <input type="number w3-round" name="entradaLibras" id="entradaLibras" value="0" /></p></td>
+						  <td><input type="button" class="w3-button w3-black w3-round w3-padding-large w3-short" value="Convertir Libras A Dólares" onclick="Libras();" /></td>
+						  <td><p><input type="label" text"resultado" ID="lblLibrasDolares" readonly/></p>
+						</td></form>
+					  </tr>
+					  <tr><form id="frmDemo2" name="frmDemo2" action="" method="post">
+						  <td>
+						  <p>Cantidad en Pesos Mexicanos
+						 <input type="number w3-round" name="entradaPesosM" id="entradaPesosM" value="0" /></p></td>
+						  <td><input type="button" class="w3-button w3-black w3-round w3-padding-large w3-short" value="Convertir Pesos A Dólares" onclick="PesosM();" /></td>
+						  <td><p><input type="label" text"resultado" ID="lblPesosMDolares" readonly/></p>
+						</td></form>
+					  </tr>
+					  <tr><form id="frmDemo3" name="frmDemo3" action="" method="post">
+						  <td>
+						  <p>Cantidad en Pesos Colombianos
+						 <input type="number w3-round" name="entradaPesosC" id="entradaPesosC" value="0" /></p></td>
+						  <td><input type="button" class="w3-button w3-black w3-round w3-padding-large w3-short" value="Convertir Pesos A Dólares" onclick="PesosC();" /></td>
+						  <td><p><input type="label" text"resultado" ID="lblPesosCDolares" readonly/></p>
+						</td></form>
+					  </tr>
+						<tr><form id="frmDemo4" name="frmDemo4" action="" method="post">
+						  <td>
+						  <p>Cantidad en Soles
+						 <input type="number w3-round" name="entradaSoles" id="entradaSoles" value="0" /></p></td>
+						  <td><input type="button" class="w3-button w3-black w3-round w3-padding-large w3-short" value="Convertir Soles A Dólares" onclick="Soles();" /></td>
+						  <td><p><input type="label" text"resultado" ID="lblSolesDolares" readonly/></p>
+						</td></form>
+					  </tr>
+					  <tr><form id="frmDemo5" name="frmDemo5" action="" method="post">
+						  <td>
+						  <p>Cantidad en Yuanes
+						 <input type="number w3-round" name="entradaYuanes" id="entradaYuanes" value="0" /></p></td>
+						  <td><input type="button" class="w3-button w3-black w3-round w3-padding-large w3-short" value="Convertir Yuanes A Dólares" onclick="Yuanes();" /></td>
+						  <td><p><input type="label" text"resultado" ID="lblYuanesDolares" readonly/></p>
+						</td></form>
+					  </tr>
+				</form>
+				</table>
+			
+		</div>
+  </div>
+
+  <!-- Formulario para enviar mensaje modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+      <div class="w3-container w3-white w3-center">
+        <h1 class="w3-wide">¿Puedes venir?</h1>
+        <p>Esperamos que puedas hacerlo.</p>
+        <form id="person-form">
+          <input class="w3-input w3-border form-control" id="person-name" type="text" placeholder="Nombres" name="name" oninvalid="this.setCustomValidity('Por favor, llene este campo')" required>
+          <div class="w3-row">
+            <div class="w3-half">
+              <button type="submit" class="w3-button w3-block w3-green">Vamos!</button>
+            </div>
+            <div class="w3-half">
+              <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                class="w3-button w3-block w3-red">No puedo ir :(</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- RSVP section -->
+  <div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="registro">
+    <h1>Te acompañamos en este viaje</h1>
+    <p class="w3-large">Recibe información de paquetes turísticos</p>
+    <p class="w3-xlarge">
+      <button onclick="document.getElementById('id01').style.display='block'"
+        class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Quiero
+        registrarme</button>
+    </p>
+    <ul class="w3-ul w3-card-4" style="text-align:center;max-width:50%;margin:0 auto;">
+      <li class="w3-red w3-opacity"><h4>Últimas 5 Personas Registradas</h4></li>
+      <div class="col-md-6" id="people-container"></div>
+    </ul>
+  </div>
+
+  <!-- FIREBASE -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBmVXZcYUm2dOd2rNsQ6Dg88T7Zi0Z875w",
+      authDomain: "turismo-ec3f6.firebaseapp.com",
+      databaseURL: "https://turismo-ec3f6.firebaseio.com",
+      projectId: "turismo-ec3f6",
+      storageBucket: "turismo-ec3f6.appspot.com",
+      messagingSenderId: "998500733349",
+      appId: "1:998500733349:web:761aa5cf6ba98c860bd84c",
+      measurementId: "G-M9XPXWJPK2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script>
+    const db = firebase.firestore();
+    const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+
+    const personForm = document.getElementById("person-form");
+    const peopleContainer = document.getElementById("people-container");
+
+    /**
+     * Guardar una nueva persona en Firebase
+     * @param {string} name el nombre de la Persona
+     */
+    const savePerson = (name) => db.collection("people").doc().set({
+        name,
+        timestamp: timestamp()
+      });
+
+    const onGetLast5People = (callback) => db.collection("people").
+      orderBy('timestamp', 'desc').limit(5).onSnapshot(callback);
+
+
+    window.addEventListener("DOMContentLoaded", async (e) => {
+      onGetLast5People((querySnapshot) => {
+        peopleContainer.innerHTML = "";
+        if (querySnapshot.empty) {
+          peopleContainer.innerHTML += `<li>Todavía no hay personas registradas</li>`;
+        } else {
+          querySnapshot.forEach((doc) => {
+            const person = doc.data();
+
+            peopleContainer.innerHTML += `<li>${person.name}</li>`;
+          });
+        }
+      });
+    });
+
+    personForm.addEventListener("submit", async (e) => {
+      event.preventDefault();
+      const name = personForm["person-name"];
+
+      if (personForm.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      try {
+        await savePerson(name.value);
+        personForm.reset();
+      } catch (error) {
+        console.log(error);
+      } finally {
+        document.getElementById("id01").style.display='none';
+      }
+    });
+  </script>
+
+  <!-- RSVP section -->
+  <div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="ruta">
+    <h1>Ruta</h1>
+    <p class="w3-large">Conoce el Ecuador con nosotros</p>
+    <p class="w3-xlarge">
+    </p>
+    <div style="height: 400px;" id="mapid">
+    </div>
+    <script type="text/javascript">
+      var mymap = L.map('mapid').setView([0.2201641, -78.5123274], 7);
+      console.log(mymap);
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mymap);
+      var control = L.Routing.control({
+        router: new L.Routing.osrmv1({
+          language: 'en',
+          profile: 'car'
+        }),
+        geocoder: L.Control.Geocoder.nominatim({})
+      }).addTo(mymap);
+    </script>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-16">
+    <p> <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green"></a></p>
+  </footer>
+  <div class="w3-hide-small" style="margin-bottom:32px"> </div>
+
+</body>
+
+</html>
